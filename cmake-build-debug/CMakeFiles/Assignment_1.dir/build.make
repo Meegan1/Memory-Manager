@@ -70,17 +70,47 @@ CMakeFiles/Assignment_1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_1.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/main.cpp" -o CMakeFiles/Assignment_1.dir/main.cpp.s
 
+CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o: CMakeFiles/Assignment_1.dir/flags.make
+CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o: ../StackAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o -c "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.cpp"
+
+CMakeFiles/Assignment_1.dir/StackAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment_1.dir/StackAllocator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.cpp" > CMakeFiles/Assignment_1.dir/StackAllocator.cpp.i
+
+CMakeFiles/Assignment_1.dir/StackAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_1.dir/StackAllocator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.cpp" -o CMakeFiles/Assignment_1.dir/StackAllocator.cpp.s
+
+CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o: CMakeFiles/Assignment_1.dir/flags.make
+CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o: ../DoubleEndedStackAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o -c "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.cpp"
+
+CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.cpp" > CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.i
+
+CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.cpp" -o CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.s
+
 # Object files for target Assignment_1
 Assignment_1_OBJECTS = \
-"CMakeFiles/Assignment_1.dir/main.cpp.o"
+"CMakeFiles/Assignment_1.dir/main.cpp.o" \
+"CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o" \
+"CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o"
 
 # External object files for target Assignment_1
 Assignment_1_EXTERNAL_OBJECTS =
 
 Assignment_1: CMakeFiles/Assignment_1.dir/main.cpp.o
+Assignment_1: CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o
+Assignment_1: CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o
 Assignment_1: CMakeFiles/Assignment_1.dir/build.make
 Assignment_1: CMakeFiles/Assignment_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Assignment_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Assignment_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

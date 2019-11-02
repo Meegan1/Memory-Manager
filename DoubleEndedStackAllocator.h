@@ -1,0 +1,14 @@
+//
+// Created by Jake Meegan on 02/11/2019.
+//
+
+#ifndef ASSIGNMENT_1_DOUBLEENDEDSTACKALLOCATOR_H
+#define ASSIGNMENT_1_DOUBLEENDEDSTACKALLOCATOR_H
+
+
+class DoubleEndedStackAllocator {
+
+};
+
+
+#endif //ASSIGNMENT_1_DOUBLEENDEDSTACKALLOCATOR_H

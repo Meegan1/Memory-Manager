@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o"
+  "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o"
   "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/main.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

@@ -123,6 +123,60 @@ Assignment_1/fast:
 	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/build
 .PHONY : Assignment_1/fast
 
+DoubleEndedStackAllocator.o: DoubleEndedStackAllocator.cpp.o
+
+.PHONY : DoubleEndedStackAllocator.o
+
+# target to build an object file
+DoubleEndedStackAllocator.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.o
+.PHONY : DoubleEndedStackAllocator.cpp.o
+
+DoubleEndedStackAllocator.i: DoubleEndedStackAllocator.cpp.i
+
+.PHONY : DoubleEndedStackAllocator.i
+
+# target to preprocess a source file
+DoubleEndedStackAllocator.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.i
+.PHONY : DoubleEndedStackAllocator.cpp.i
+
+DoubleEndedStackAllocator.s: DoubleEndedStackAllocator.cpp.s
+
+.PHONY : DoubleEndedStackAllocator.s
+
+# target to generate assembly for a file
+DoubleEndedStackAllocator.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/DoubleEndedStackAllocator.cpp.s
+.PHONY : DoubleEndedStackAllocator.cpp.s
+
+StackAllocator.o: StackAllocator.cpp.o
+
+.PHONY : StackAllocator.o
+
+# target to build an object file
+StackAllocator.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/StackAllocator.cpp.o
+.PHONY : StackAllocator.cpp.o
+
+StackAllocator.i: StackAllocator.cpp.i
+
+.PHONY : StackAllocator.i
+
+# target to preprocess a source file
+StackAllocator.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/StackAllocator.cpp.i
+.PHONY : StackAllocator.cpp.i
+
+StackAllocator.s: StackAllocator.cpp.s
+
+.PHONY : StackAllocator.s
+
+# target to generate assembly for a file
+StackAllocator.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/StackAllocator.cpp.s
+.PHONY : StackAllocator.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Assignment_1"
+	@echo "... DoubleEndedStackAllocator.o"
+	@echo "... DoubleEndedStackAllocator.i"
+	@echo "... DoubleEndedStackAllocator.s"
+	@echo "... StackAllocator.o"
+	@echo "... StackAllocator.i"
+	@echo "... StackAllocator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
