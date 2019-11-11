@@ -8,13 +8,13 @@
 
 #include "Allocator.h"
 
-class StackAllocator : Allocator {
+class StackAllocator : public Allocator {
 public:
     typedef std::size_t Marker;
 
-    explicit StackAllocator(std::size_t sizeBytes, unsigned int stackSize_bytes);
+    explicit StackAllocator(std::size_t stackSize_bytes);
 
-    void* alloc(unsigned int size_bytes);
+    void* alloc(std::size_t size_bytes);
 
     Marker getMarker();
 

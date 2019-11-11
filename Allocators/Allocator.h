@@ -5,18 +5,19 @@
 #ifndef ASSIGNMENT_1_ALLOCATOR_H
 #define ASSIGNMENT_1_ALLOCATOR_H
 
+#include <cstdlib>
 
 class Allocator {
 public:
-    explicit Allocator(const std::size_t size_bytes) {
-        this->total_size = size_bytes;
+    Allocator(std::size_t size_bytes) {
+        total_size = size_bytes;
     }
 
-    virtual void* alloc() = 0;
+    std::size_t getSize() {
+        return total_size;
+    }
 
-    virtual void clear() = 0;
-
-protected:
+private:
     std::size_t total_size;
 };
 

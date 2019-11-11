@@ -80,19 +80,49 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocator.h">
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/Allocator.h">
 			<Option target="Assignment_1"/>
 		</Unit>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.cpp">
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/DoubleEndedStackAllocator.cpp">
 			<Option target="Assignment_1"/>
 		</Unit>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/DoubleEndedStackAllocator.h">
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/DoubleEndedStackAllocator.h">
 			<Option target="Assignment_1"/>
 		</Unit>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.cpp">
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/MemoryManager.h">
 			<Option target="Assignment_1"/>
 		</Unit>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/StackAllocator.h">
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/PoolAllocator.cpp">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/PoolAllocator.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/ReferenceCount.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/SmartPointer.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/StackAllocator.cpp">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/StackAllocator.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Tests/DoubleEndedStackAllocatorTest.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Tests/MemoryManagerTest.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Tests/PoolAllocatorTest.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Tests/SmartPointerTest.h">
+			<Option target="Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Tests/StackAllocatorTest.h">
 			<Option target="Assignment_1"/>
 		</Unit>
 		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/main.cpp">
