@@ -21,9 +21,10 @@ public:
 
 private:
     void checkCreation() {
-//        SmartPointer<PoolAllocator> pool(new PoolAllocator(10, 5));
-//        void *memory = pool->alloc();
-
+        // create smart pointer for pool
+        SmartPointer<PoolAllocator> pool(new PoolAllocator(10, 5));
+        void *memory = pool->alloc();
+        assert(memory != nullptr); // check pool is operating correctly
     }
 };
 

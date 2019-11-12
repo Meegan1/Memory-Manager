@@ -18,7 +18,7 @@ public:
         count->add(); // add to reference count
     }
 
-    explicit SmartPointer(T *pointer) { // constructor with object passed to it
+    explicit SmartPointer(T *pointer) : pointer(pointer) { // constructor with object passed to it
         count = new ReferenceCount();
         count->add(); // add to reference count
     }

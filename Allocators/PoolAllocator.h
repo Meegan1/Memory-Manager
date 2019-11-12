@@ -16,6 +16,7 @@ public:
     PoolAllocator(std::size_t blockSize, std::size_t totalBlocks); // allocates memory size of blockSize * totalBlocks
     void *alloc(); // allocate a block
     void dealloc(void *block); // deallocate a block
+    void clear();
 
 private:
     std::size_t blockSize; // stores block size
