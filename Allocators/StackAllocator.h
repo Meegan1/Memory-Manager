@@ -14,7 +14,7 @@ public:
 
     explicit StackAllocator(std::size_t stackSize_bytes);
 
-    void* alloc(std::size_t size_bytes);
+    void *alloc(std::size_t size_bytes);
 
     Marker getMarker();
 
@@ -23,7 +23,7 @@ public:
     void clear();
 
 private:
-    void* stack_ptr;
+    void *stack_ptr;
     Marker offset;
 };
 

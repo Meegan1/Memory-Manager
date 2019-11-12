@@ -11,19 +11,19 @@
 #include "StackAllocator.h"
 #include "DoubleEndedStackAllocator.h"
 
-template<class T, typename U = int>
+template<class T, typename U = void>
 class MemoryManager;
 
-template <>
+template<>
 class MemoryManager<StackAllocator> {
 private:
     StackAllocator *allocator;
 
 public:
-    explicit MemoryManager(std::size_t size);
+    explicit MemoryManager(std::size_t size) : allocator(new StackAllocator(size)) {}
 
-    void add(std::size_t size) {
-        allocator->alloc(size);
+    void *add(std::size_t size) {
+        return allocator->alloc(size);
     }
 
     template<typename U>
@@ -47,7 +47,7 @@ public:
 
 };
 
-template <>
+template<>
 class MemoryManager<DoubleEndedStackAllocator> {
 private:
     DoubleEndedStackAllocator *allocator;
@@ -55,18 +55,18 @@ private:
 public:
     explicit MemoryManager(std::size_t size) : allocator(new DoubleEndedStackAllocator(size)) {}
 
-    void add(std::size_t size, bool isTop = false) {
-        if(isTop)
-            allocator->allocTop(size);
+    void *add(std::size_t size, bool isTop = false) {
+        if (isTop)
+            return allocator->allocTop(size);
         else
-            allocator->allocBottom(size);
+            return allocator->allocBottom(size);
     }
 
     template<typename U>
     U *add(U object, bool isTop = false) {
         U *stored;
 
-        if(isTop)
+        if (isTop)
             stored = (U *) allocator->allocTop(sizeof(U));
         else
             stored = (U *) allocator->allocBottom(sizeof(U));
@@ -88,33 +88,41 @@ public:
     }
 };
 
-template <typename U> class MemoryManager<PoolAllocator, U> {
+template<>
+class MemoryManager<PoolAllocator> {
 private:
     PoolAllocator *allocator;
 public:
-    explicit MemoryManager(std::size_t blockSize, std::size_t totalBlocks): allocator(new PoolAllocator(blockSize, totalBlocks)) {
+    explicit MemoryManager(std::size_t blockSize, std::size_t totalBlocks) : allocator(
+            new PoolAllocator(blockSize, totalBlocks)) {
         assert(blockSize >= sizeof(void *));
-    }
-
-    explicit MemoryManager(std::size_t totalBlocks): allocator(new PoolAllocator(sizeof(U), totalBlocks)) {
-        assert(sizeof(U) >= sizeof(void *));
     }
 
     void *add() {
         return allocator->alloc();
     }
 
+    void remove(void *object) {
+        allocator->dealloc(object);
+    }
+};
+
+template<typename U>
+class MemoryManager<PoolAllocator, U> {
+private:
+    PoolAllocator *allocator;
+public:
+    explicit MemoryManager(std::size_t totalBlocks) : allocator(new PoolAllocator(sizeof(U), totalBlocks)) {
+        assert(sizeof(U) >= sizeof(void *));
+    }
+
     U *add(U object) {
-        U *stored = (U*) allocator->alloc();
+        U *stored = (U *) allocator->alloc();
         *stored = object;
-        return (U*) stored;
+        return (U *) stored;
     }
 
     void remove(U *object) {
-        allocator->dealloc(object);
-    }
-
-    void remove(void *object) {
         allocator->dealloc(object);
     }
 };

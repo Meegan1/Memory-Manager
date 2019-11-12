@@ -12,23 +12,23 @@ DoubleEndedStackAllocator::DoubleEndedStackAllocator(std::size_t stackSize_bytes
 }
 
 void *DoubleEndedStackAllocator::allocBottom(std::size_t size_bytes) {
-    if((offset_bottom + size_bytes + offset_top) > getSize())
+    if ((offset_bottom + size_bytes + offset_top) > getSize())
         return nullptr;
 
     std::size_t address = (std::size_t) stack_ptr + offset_bottom;
     offset_bottom += size_bytes;
 
-    return (void*) address;
+    return (void *) address;
 }
 
 void *DoubleEndedStackAllocator::allocTop(std::size_t size_bytes) {
-    if((offset_bottom + size_bytes + offset_top) > getSize())
+    if ((offset_bottom + size_bytes + offset_top) > getSize())
         return nullptr;
 
     offset_top += size_bytes;
     std::size_t address = (std::size_t) stack_ptr_end - offset_top;
 
-    return (void*) address;
+    return (void *) address;
 }
 
 DoubleEndedStackAllocator::Marker DoubleEndedStackAllocator::getMarkerBottom() {

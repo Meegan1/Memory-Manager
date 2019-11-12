@@ -23,7 +23,7 @@ private:
         pool = new PoolAllocator(8, 10);
         assert(pool->getSize() == 80);
 
-        void* firstElement = pool->alloc();
+        void *firstElement = pool->alloc();
         pool->alloc();
 
         pool->dealloc(firstElement);

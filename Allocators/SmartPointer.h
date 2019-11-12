@@ -7,10 +7,11 @@
 
 #include "ReferenceCount.h"
 
-template <typename T> class SmartPointer {
+template<typename T>
+class SmartPointer {
 private:
-    T* pointer;
-    ReferenceCount* count;
+    T *pointer;
+    ReferenceCount *count;
 
 public:
     SmartPointer() : pointer(), count() {
@@ -28,7 +29,7 @@ public:
     }
 
     ~SmartPointer() {
-        if(count->release() == 0) {
+        if (count->release() == 0) {
             delete pointer;
             delete count;
         }
@@ -43,8 +44,8 @@ public:
     }
 
     SmartPointer<T> &operator=(const SmartPointer<T> &other) {
-        if(this != &other) {
-            if(count->release() == 0) {
+        if (this != &other) {
+            if (count->release() == 0) {
                 delete pointer;
                 delete count;
             }

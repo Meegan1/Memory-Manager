@@ -26,29 +26,29 @@ private:
     }
 
     void checkAddItems() {
-        short int *first_bottom = (short int *)stack->allocBottom(2);
+        short int *first_bottom = (short int *) stack->allocBottom(2);
         *first_bottom = 11;
 
-        short int *first_top = (short int *)stack->allocTop(2);
+        short int *first_top = (short int *) stack->allocTop(2);
         *first_top = 22;
 
-        short int *second_bottom = (short int *)stack->allocBottom(2);
+        short int *second_bottom = (short int *) stack->allocBottom(2);
         *second_bottom = 33;
 
         assert(*first_bottom == 11);
         assert(*second_bottom == 33);
         assert(*first_top == 22);
 
-        short int *second_top = (short int *)stack->allocTop(3);
+        short int *second_top = (short int *) stack->allocTop(3);
         assert(second_top == nullptr); // failed to allocate memory as requested size greater than size of stack
 
-        second_top = (short int *)stack->allocTop(2); // retry with compatible size
+        second_top = (short int *) stack->allocTop(2); // retry with compatible size
         assert(second_top != nullptr);
         *second_top = 44;
         assert(*second_top == 44);
     }
 
-    DoubleEndedStackAllocator* stack;
+    DoubleEndedStackAllocator *stack;
 };
 
 

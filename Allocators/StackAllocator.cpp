@@ -10,13 +10,13 @@ StackAllocator::StackAllocator(std::size_t stackSize_bytes) : Allocator(stackSiz
 }
 
 void *StackAllocator::alloc(std::size_t size_bytes) {
-    if(offset + size_bytes > this->getSize())
+    if (offset + size_bytes > this->getSize())
         return nullptr;
 
     std::size_t address = (std::size_t) stack_ptr + offset;
     offset += size_bytes;
 
-    return (void*) address;
+    return (void *) address;
 }
 
 StackAllocator::Marker StackAllocator::getMarker() {

@@ -89,9 +89,6 @@
 		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/DoubleEndedStackAllocator.h">
 			<Option target="Assignment_1"/>
 		</Unit>
-		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/MemoryManager.cpp">
-			<Option target="Assignment_1"/>
-		</Unit>
 		<Unit filename="/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/MemoryManager.h">
 			<Option target="Assignment_1"/>
 		</Unit>

@@ -22,7 +22,7 @@ public:
 private:
     void checkCreation() {
         SmartPointer<PoolAllocator> pool(new PoolAllocator(10, 5));
-        void* memory = pool->alloc();
+        void *memory = pool->alloc();
 
     }
 };

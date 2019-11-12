@@ -40,8 +40,7 @@ private:
     void checkPool() {
         MemoryManager<PoolAllocator, long> pool(5);
         long *test = pool.add(long(25));
-        long *test2 = (long*) pool.add();
-        *test2 = 99;
+        long *test2 = (long *) pool.add(99);
 
         assert(*test == 25);
         assert(*test2 == 99);
@@ -50,6 +49,8 @@ private:
         long *test3 = pool.add(long(55));
 
         assert(test = test3);
+
+        MemoryManager<PoolAllocator> t(23, 44);
     }
 };
 

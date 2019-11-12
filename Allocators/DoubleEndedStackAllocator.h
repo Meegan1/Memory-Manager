@@ -14,20 +14,23 @@ public:
 
     explicit DoubleEndedStackAllocator(std::size_t stackSize_bytes);
 
-    void* allocBottom(std::size_t size_bytes);
-    void* allocTop(std::size_t size_bytes);
+    void *allocBottom(std::size_t size_bytes);
+
+    void *allocTop(std::size_t size_bytes);
 
     Marker getMarkerBottom();
+
     Marker getMarkerTop();
 
     void freeBottomToMarker(Marker marker);
+
     void freeTopToMarker(Marker marker);
 
     void clear();
 
 private:
-    void* stack_ptr;
-    void* stack_ptr_end;
+    void *stack_ptr;
+    void *stack_ptr_end;
     Marker offset_bottom;
     Marker offset_top;
 };

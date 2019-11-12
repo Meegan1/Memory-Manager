@@ -29,9 +29,9 @@ private:
     void checkAddItems() {
         StackAllocator::Marker firstMarker = stack->getMarker();
 
-        short int *first = (short int *)stack->alloc(2);
+        short int *first = (short int *) stack->alloc(2);
         *first = 54;
-        short int *second = (short int *)stack->alloc(2);
+        short int *second = (short int *) stack->alloc(2);
         *second = 99;
 
         assert(*first == 54);
@@ -41,12 +41,12 @@ private:
         assert(*first == 23);
 
         stack->freeToMarker(firstMarker);
-        short int *third = (short int *)stack->alloc(2);
+        short int *third = (short int *) stack->alloc(2);
         *third = 13;
         assert(*third == 13);
     }
 
-    StackAllocator* stack;
+    StackAllocator *stack;
 };
 
 
