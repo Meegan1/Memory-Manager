@@ -7,9 +7,13 @@
 
 #include <cstdlib>
 
+/*
+ * Super Class for all Allocators
+ */
 class Allocator {
 public:
-    Allocator(std::size_t size_bytes) {
+    // constructor
+    explicit Allocator(std::size_t size_bytes) {
         total_size = size_bytes;
     }
 
@@ -18,7 +22,7 @@ public:
     }
 
 private:
-    std::size_t total_size;
+    std::size_t total_size; // stores the total size of the memory
 };
 
 

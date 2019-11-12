@@ -9,10 +9,6 @@
 
 template<typename T>
 class SmartPointer {
-private:
-    T *pointer;
-    ReferenceCount *count;
-
 public:
     SmartPointer() : pointer(), count() {
         count = new ReferenceCount();
@@ -56,6 +52,10 @@ public:
         }
         return *this;
     }
+
+private:
+    T *pointer;
+    ReferenceCount *count;
 };
 
 

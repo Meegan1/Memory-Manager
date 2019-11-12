@@ -7,9 +7,6 @@
 
 
 class ReferenceCount {
-private:
-    int count;
-
 public:
     void add() {
         count++;
@@ -18,6 +15,9 @@ public:
     int release() {
         return --count;
     }
+
+private:
+    int count;
 };
 
 

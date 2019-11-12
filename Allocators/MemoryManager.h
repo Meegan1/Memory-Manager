@@ -16,9 +16,6 @@ class MemoryManager;
 
 template<>
 class MemoryManager<StackAllocator> {
-private:
-    StackAllocator *allocator;
-
 public:
     explicit MemoryManager(std::size_t size) : allocator(new StackAllocator(size)) {}
 
@@ -45,13 +42,12 @@ public:
         allocator->clear();
     }
 
+private:
+    StackAllocator *allocator;
 };
 
 template<>
 class MemoryManager<DoubleEndedStackAllocator> {
-private:
-    DoubleEndedStackAllocator *allocator;
-
 public:
     explicit MemoryManager(std::size_t size) : allocator(new DoubleEndedStackAllocator(size)) {}
 
@@ -86,12 +82,13 @@ public:
     void clear() {
         allocator->clear();
     }
+
+private:
+    DoubleEndedStackAllocator *allocator;
 };
 
 template<>
 class MemoryManager<PoolAllocator> {
-private:
-    PoolAllocator *allocator;
 public:
     explicit MemoryManager(std::size_t blockSize, std::size_t totalBlocks) : allocator(
             new PoolAllocator(blockSize, totalBlocks)) {
@@ -105,12 +102,13 @@ public:
     void remove(void *object) {
         allocator->dealloc(object);
     }
+
+private:
+    PoolAllocator *allocator;
 };
 
 template<typename U>
 class MemoryManager<PoolAllocator, U> {
-private:
-    PoolAllocator *allocator;
 public:
     explicit MemoryManager(std::size_t totalBlocks) : allocator(new PoolAllocator(sizeof(U), totalBlocks)) {
         assert(sizeof(U) >= sizeof(void *));
@@ -125,6 +123,9 @@ public:
     void remove(U *object) {
         allocator->dealloc(object);
     }
+
+private:
+    PoolAllocator *allocator;
 };
 
 #endif //ASSIGNMENT_1_MEMORYMANAGER_H
