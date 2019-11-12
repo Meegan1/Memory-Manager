@@ -21,7 +21,35 @@ public:
 
 private:
     void checkCreation() {
-        MemoryManager<StackAllocator> pool(23);
+        checkStack();
+        checkDoubleEndedStack();
+        checkPool();
+    }
+
+    void checkStack() {
+        MemoryManager<StackAllocator> stack(23);
+        float *test = stack.add(float(54));
+    }
+
+    void checkDoubleEndedStack() {
+        MemoryManager<DoubleEndedStackAllocator> doubleStack(23);
+        float *testBottom = doubleStack.add(float(100));
+        float *testTop = doubleStack.add(float(100), true);
+    }
+
+    void checkPool() {
+        MemoryManager<PoolAllocator, long> pool(5);
+        long *test = pool.add(long(25));
+        long *test2 = (long*) pool.add();
+        *test2 = 99;
+
+        assert(*test == 25);
+        assert(*test2 == 99);
+
+        pool.remove(test);
+        long *test3 = pool.add(long(55));
+
+        assert(test = test3);
     }
 };
 

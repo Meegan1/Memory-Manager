@@ -150,6 +150,33 @@ Allocators/DoubleEndedStackAllocator.cpp.s:
 	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/Allocators/DoubleEndedStackAllocator.cpp.s
 .PHONY : Allocators/DoubleEndedStackAllocator.cpp.s
 
+Allocators/MemoryManager.o: Allocators/MemoryManager.cpp.o
+
+.PHONY : Allocators/MemoryManager.o
+
+# target to build an object file
+Allocators/MemoryManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o
+.PHONY : Allocators/MemoryManager.cpp.o
+
+Allocators/MemoryManager.i: Allocators/MemoryManager.cpp.i
+
+.PHONY : Allocators/MemoryManager.i
+
+# target to preprocess a source file
+Allocators/MemoryManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.i
+.PHONY : Allocators/MemoryManager.cpp.i
+
+Allocators/MemoryManager.s: Allocators/MemoryManager.cpp.s
+
+.PHONY : Allocators/MemoryManager.s
+
+# target to generate assembly for a file
+Allocators/MemoryManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_1.dir/build.make CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.s
+.PHONY : Allocators/MemoryManager.cpp.s
+
 Allocators/PoolAllocator.o: Allocators/PoolAllocator.cpp.o
 
 .PHONY : Allocators/PoolAllocator.o
@@ -243,6 +270,9 @@ help:
 	@echo "... Allocators/DoubleEndedStackAllocator.o"
 	@echo "... Allocators/DoubleEndedStackAllocator.i"
 	@echo "... Allocators/DoubleEndedStackAllocator.s"
+	@echo "... Allocators/MemoryManager.o"
+	@echo "... Allocators/MemoryManager.i"
+	@echo "... Allocators/MemoryManager.s"
 	@echo "... Allocators/PoolAllocator.o"
 	@echo "... Allocators/PoolAllocator.i"
 	@echo "... Allocators/PoolAllocator.s"

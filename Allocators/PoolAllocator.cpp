@@ -28,7 +28,7 @@ PoolAllocator::PoolAllocator(std::size_t blockSize, std::size_t totalBlocks)
 }
 
 void *PoolAllocator::alloc() {
-    void *address = *head; // store free address in temp address
+    void *address = head; // store free address in temp address
     head = (void **) *head; // store next free address in head
     return address; // return address
 }

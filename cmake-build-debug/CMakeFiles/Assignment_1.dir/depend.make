@@ -5,6 +5,13 @@ CMakeFiles/Assignment_1.dir/Allocators/DoubleEndedStackAllocator.cpp.o: ../Alloc
 CMakeFiles/Assignment_1.dir/Allocators/DoubleEndedStackAllocator.cpp.o: ../Allocators/DoubleEndedStackAllocator.cpp
 CMakeFiles/Assignment_1.dir/Allocators/DoubleEndedStackAllocator.cpp.o: ../Allocators/DoubleEndedStackAllocator.h
 
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/Allocator.h
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/DoubleEndedStackAllocator.h
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/MemoryManager.cpp
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/MemoryManager.h
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/PoolAllocator.h
+CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o: ../Allocators/StackAllocator.h
+
 CMakeFiles/Assignment_1.dir/Allocators/PoolAllocator.cpp.o: ../Allocators/Allocator.h
 CMakeFiles/Assignment_1.dir/Allocators/PoolAllocator.cpp.o: ../Allocators/PoolAllocator.cpp
 CMakeFiles/Assignment_1.dir/Allocators/PoolAllocator.cpp.o: ../Allocators/PoolAllocator.h

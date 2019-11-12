@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/DoubleEndedStackAllocator.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/Allocators/DoubleEndedStackAllocator.cpp.o"
+  "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/MemoryManager.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/Allocators/MemoryManager.cpp.o"
   "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/PoolAllocator.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/Allocators/PoolAllocator.cpp.o"
   "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/Allocators/StackAllocator.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/Allocators/StackAllocator.cpp.o"
   "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/main.cpp" "/Users/meegan1/Documents/University/Assignments/Game Engines and Workflows/Assignment 1/cmake-build-debug/CMakeFiles/Assignment_1.dir/main.cpp.o"
