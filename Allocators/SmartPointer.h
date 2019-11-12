@@ -7,55 +7,60 @@
 
 #include "ReferenceCount.h"
 
+/*
+ * Smart Pointer
+ */
 template<typename T>
 class SmartPointer {
 public:
-    SmartPointer() : pointer(), count() {
+    SmartPointer(){ // constructor
         count = new ReferenceCount();
-        count->add();
+        count->add(); // add to reference count
     }
 
-    SmartPointer(T *pointer) : pointer(pointer), count() {
+    explicit SmartPointer(T *pointer) { // constructor with object passed to it
         count = new ReferenceCount();
-        count->add();
+        count->add(); // add to reference count
     }
 
-    SmartPointer(const SmartPointer<T> &other) : pointer(other.pointer), count(other.count) {
-        count->add();
-    }
+    SmartPointer(const SmartPointer<T> &other) : pointer(other.pointer), count(other.count) { //  copy constructor
+        count->add(); // add to reference count
+    };
 
-    ~SmartPointer() {
-        if (count->release() == 0) {
+    ~SmartPointer(){ // destructor
+        if (count->release() == 0) { // if reference counter is 0, delete data and counter
             delete pointer;
             delete count;
         }
-    }
+    };
 
+    // operator overloads
     T &operator*() {
         return *pointer;
-    }
+    };
 
     T *operator->() {
         return pointer;
-    }
+    };
 
     SmartPointer<T> &operator=(const SmartPointer<T> &other) {
         if (this != &other) {
-            if (count->release() == 0) {
+            if (count->release() == 0) { // if reference counter is 0, delete data and counter
                 delete pointer;
                 delete count;
             }
 
+            // copy attributes from other SmartPointer
             pointer = other.pointer;
             count = other.count;
-            count->add();
+            count->add(); // add to reference count
         }
         return *this;
-    }
+    };
 
 private:
-    T *pointer;
-    ReferenceCount *count;
+    T *pointer; // pointer to data
+    ReferenceCount *count; // reference counter object
 };
 
 

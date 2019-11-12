@@ -8,20 +8,20 @@
 
 #include "Allocator.h"
 
-class PoolAllocator: public Allocator {
+/*
+ *
+ */
+class PoolAllocator : public Allocator {
 public:
-    PoolAllocator(std::size_t blockSize, std::size_t totalBlocks);
-
-    void *alloc();
-
-    void dealloc(void *block);
+    PoolAllocator(std::size_t blockSize, std::size_t totalBlocks); // allocates memory size of blockSize * totalBlocks
+    void *alloc(); // allocate a block
+    void dealloc(void *block); // deallocate a block
 
 private:
-    std::size_t blockSize;
-    std::size_t totalBlocks;
-    void *pool;
-
-    void **head;
+    std::size_t blockSize; // stores block size
+    std::size_t totalBlocks; // stores total number of possible blocks
+    void *pool; // pointer to pool
+    void **head; // pointer to current head of pool
 };
 
 

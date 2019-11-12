@@ -24,7 +24,8 @@ StackAllocator::Marker StackAllocator::getMarker() {
 }
 
 void StackAllocator::freeToMarker(StackAllocator::Marker marker) {
-    offset = marker;
+    if(marker < offset) // only free if less than current offset
+        offset = marker;
 }
 
 void StackAllocator::clear() {

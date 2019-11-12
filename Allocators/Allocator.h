@@ -17,6 +17,7 @@ public:
         total_size = size_bytes;
     }
 
+    // return total size
     std::size_t getSize() {
         return total_size;
     }

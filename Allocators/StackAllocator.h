@@ -8,23 +8,22 @@
 
 #include "Allocator.h"
 
+/*
+ * Stack Allocator
+ */
 class StackAllocator : public Allocator {
 public:
-    typedef std::size_t Marker;
+    typedef std::size_t Marker; // define marker type
 
-    explicit StackAllocator(std::size_t stackSize_bytes);
-
-    void *alloc(std::size_t size_bytes);
-
-    Marker getMarker();
-
-    void freeToMarker(Marker marker);
-
-    void clear();
+    explicit StackAllocator(std::size_t stackSize_bytes); // constructor (allocates stack size)
+    void *alloc(std::size_t size_bytes); // allocates to stack
+    Marker getMarker(); // get current position of stack
+    void freeToMarker(Marker marker); // free to position of given marker
+    void clear(); // clear stack (resets position)
 
 private:
-    void *stack_ptr;
-    Marker offset;
+    void *stack_ptr; // pointer to stack
+    Marker offset; // current position of stack
 };
 
 

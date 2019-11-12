@@ -40,11 +40,13 @@ DoubleEndedStackAllocator::Marker DoubleEndedStackAllocator::getMarkerTop() {
 }
 
 void DoubleEndedStackAllocator::freeBottomToMarker(DoubleEndedStackAllocator::Marker marker) {
-    offset_bottom = marker;
+    if(marker < offset_bottom) // only free if less than current offset
+        offset_bottom = marker;
 }
 
 void DoubleEndedStackAllocator::freeTopToMarker(DoubleEndedStackAllocator::Marker marker) {
-    offset_top = marker;
+    if(marker < offset_top) // only free if less than current offset
+        offset_top = marker;
 }
 
 void DoubleEndedStackAllocator::clear() {

@@ -71,11 +71,11 @@ public:
         return stored;
     }
 
-    StackAllocator::Marker getMarker(bool isTop = false) {
+    DoubleEndedStackAllocator::Marker getMarker(bool isTop = false) {
         return (isTop) ? allocator->getMarkerTop() : allocator->getMarkerBottom();
     }
 
-    void freeToMarker(StackAllocator::Marker marker, bool isTop = false) {
+    void freeToMarker(DoubleEndedStackAllocator::Marker marker, bool isTop = false) {
         (isTop) ? allocator->freeTopToMarker(marker) : allocator->freeBottomToMarker(marker);
     }
 
