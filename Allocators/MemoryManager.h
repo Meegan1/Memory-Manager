@@ -22,14 +22,12 @@ class MemoryManager<StackAllocator> {
 public:
     explicit MemoryManager(std::size_t size) : allocator(new StackAllocator(size)) {}
 
-    void *add(std::size_t size) {
-        return allocator->alloc(size);
-    }
-
     template<typename U>
     U *add(U object) {
         U *stored = (U *) allocator->alloc(sizeof(U));
         *stored = object;
+        if(allocator->getMarker() >= (allocator->getSize() * 0.75))
+            std::cout << "WARNING: You have less than 25% memory remaining in the Stack" << std::endl;
         return stored;
     }
 
@@ -57,13 +55,6 @@ class MemoryManager<DoubleEndedStackAllocator> {
 public:
     explicit MemoryManager(std::size_t size) : allocator(new DoubleEndedStackAllocator(size)) {}
 
-    void *add(std::size_t size, bool isTop = false) {
-        if (isTop)
-            return allocator->allocTop(size);
-        else
-            return allocator->allocBottom(size);
-    }
-
     template<typename U>
     U *add(U object, bool isTop = false) {
         U *stored;
@@ -72,6 +63,9 @@ public:
             stored = (U *) allocator->allocTop(sizeof(U));
         else
             stored = (U *) allocator->allocBottom(sizeof(U));
+
+        if(allocator->getMarkerTop() + allocator->getMarkerBottom() >= (allocator->getSize() * 0.75))
+            std::cout << "WARNING: You have less than 25% memory remaining in the Stack" << std::endl;
 
         *stored = object;
         return stored;

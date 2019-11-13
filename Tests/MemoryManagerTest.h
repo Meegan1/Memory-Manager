@@ -45,6 +45,18 @@ private:
 
         // verify new object's memory address is same as the first
         assert(test2 == test);
+
+        stack.clear();
+
+        // add random objects to trigger 25% memory remaining message
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
+        stack.add(22);
     }
 
     void checkDoubleEndedStack() {
