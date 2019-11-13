@@ -14,6 +14,9 @@
 template<class T, typename U = void>
 class MemoryManager;
 
+/*
+ * Stack Allocator Memory Manager
+ */
 template<>
 class MemoryManager<StackAllocator> {
 public:
@@ -46,6 +49,9 @@ private:
     StackAllocator *allocator;
 };
 
+/*
+ * Double Ended Stack Allocator Memory Manager
+ */
 template<>
 class MemoryManager<DoubleEndedStackAllocator> {
 public:
@@ -87,6 +93,9 @@ private:
     DoubleEndedStackAllocator *allocator;
 };
 
+/*
+ * Pool Allocator Memory Manager
+ */
 template<>
 class MemoryManager<PoolAllocator> {
 public:
@@ -107,6 +116,9 @@ private:
     PoolAllocator *allocator;
 };
 
+/*
+ * Pool Allocator Memory Manager (specific type)
+ */
 template<typename U>
 class MemoryManager<PoolAllocator, U> {
 public:
@@ -122,6 +134,10 @@ public:
 
     void remove(U *object) {
         allocator->dealloc(object);
+    }
+
+    void clear() {
+        allocator->clear();
     }
 
 private:
